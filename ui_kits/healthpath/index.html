@@ -1,0 +1,85 @@
+<!-- @dsCard group="App" viewport="1280x800" name="HealthPath chat app" subtitle="Sidebar + main chat panel + composer. Sign-in, empty state, three message types, mobile." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HealthPath — chat application</title>
+
+<!-- Design system tokens + components -->
+<link rel="stylesheet" href="../../styles.css" />
+
+<!-- React 18 + Babel (pinned) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- Compiled design-system bundle (window.HealthPathDesignSystem_54b6fa) -->
+<script src="../../_ds_bundle.js"></script>
+
+<style>
+  html, body { margin:0; height:100%; background: var(--background); }
+  body { font-family: var(--font-sans); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+  #root { height: 100%; }
+
+  /* ---- Showcase chrome (the screen switcher around the app) ---- */
+  .showcase { display:flex; flex-direction:column; height:100vh; background: var(--warm-150); }
+  .showcase__bar {
+    display:flex; align-items:center; gap: var(--space-3);
+    padding: 10px 16px;
+    background: var(--surface-card);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .showcase__sep {
+    width: 1px; height: 20px; background: var(--border); margin: 0 4px;
+  }
+  .showcase__tab {
+    font: var(--type-ui); font-size: 13px;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+  }
+  .showcase__tab:hover { background: var(--surface-hover); color: var(--text-primary); }
+  .showcase__tab.is-active {
+    background: var(--brand-subtle);
+    color: var(--brand-subtle-text);
+  }
+  .showcase__meta { font: var(--type-caption); color: var(--text-muted); }
+
+  .showcase__stage {
+    flex: 1; min-height: 0;
+    background: var(--warm-150);
+    display: flex; align-items: stretch; justify-content: center;
+    padding: 0;
+    overflow: hidden;
+  }
+  /* Desktop screens fill the stage entirely */
+  .showcase__stage > * { flex: 1; min-width: 0; }
+
+  /* Phone frame for mobile previews */
+  .hp-mobile-frame {
+    width: 390px;
+    height: min(100%, 780px);
+    margin: 24px auto;
+    background: var(--background);
+    border-radius: 38px;
+    border: 10px solid var(--warm-900);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-modal);
+    flex: 0 0 auto !important;
+  }
+  .hp-mobile-frame .hp-app { position: relative; height: 100%; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" data-presets="env,react" src="./screens.jsx"></script>
+</body>
+</html>

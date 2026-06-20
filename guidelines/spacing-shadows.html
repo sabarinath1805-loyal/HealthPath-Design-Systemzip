@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" viewport="700x190" name="Shadows" subtitle="Six tiers, warm-tinted from --warm-950. Never neutral-black." -->
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:24px 22px; background:var(--background); color:var(--text-primary); font-family:var(--font-sans); }
+  .row { display:flex; gap:18px; align-items:flex-end; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .box { width:84px; height:64px; background:var(--surface-card); border-radius:var(--radius-md); border:1px solid var(--border-subtle); }
+  .name { font:var(--type-ui); font-size:11.5px; }
+  .lbl { font:var(--type-caption); color:var(--text-muted); font-family:var(--font-mono); }
+</style></head><body>
+<div class="row">
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-xs)"></div><div class="name">xs</div><div class="lbl">button</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-card)"></div><div class="name">card</div><div class="lbl">default</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-composer)"></div><div class="name">composer</div><div class="lbl">rest</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-composer-focus)"></div><div class="name">composer-focus</div><div class="lbl">+blue halo</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-float)"></div><div class="name">float</div><div class="lbl">menus</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-modal)"></div><div class="name">modal</div><div class="lbl">sheets</div></div>
+</div>
+</body></html>

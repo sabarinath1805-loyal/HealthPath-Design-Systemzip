@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Warm neutrals" subtitle="A whisper of warmth, hue ~85°. No sterile hospital white anywhere." -->
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:18px; background:var(--background); font-family:var(--font-sans); color:var(--text-primary); }
+  .row { display:flex; gap:8px; }
+  .sw { flex:1; min-width:0; border-radius:var(--radius-sm); padding:10px 10px; display:flex; flex-direction:column; gap:2px; border:1px solid var(--border-subtle); }
+  .name { font:var(--type-ui); font-size:11px; }
+  .hex  { font:var(--type-mono); font-size:10px; opacity:.7; }
+  .light { color: var(--warm-900); }
+  .dark  { color: var(--warm-50); }
+</style></head><body>
+<div class="row">
+  <div class="sw light" style="background:var(--warm-50)"><span class="name">warm-50</span><span class="hex">canvas</span></div>
+  <div class="sw light" style="background:var(--warm-100)"><span class="name">warm-100</span><span class="hex">sidebar</span></div>
+  <div class="sw light" style="background:var(--warm-150)"><span class="name">warm-150</span><span class="hex">hover</span></div>
+  <div class="sw light" style="background:var(--warm-200)"><span class="name">warm-200</span><span class="hex">border</span></div>
+  <div class="sw light" style="background:var(--warm-300)"><span class="name">warm-300</span><span class="hex">border-strong</span></div>
+  <div class="sw light" style="background:var(--warm-400)"><span class="name">warm-400</span><span class="hex"></span></div>
+  <div class="sw dark" style="background:var(--warm-500)"><span class="name">warm-500</span><span class="hex">text-muted</span></div>
+  <div class="sw dark" style="background:var(--warm-700)"><span class="name">warm-700</span><span class="hex">text-secondary</span></div>
+  <div class="sw dark" style="background:var(--warm-900)"><span class="name">warm-900</span><span class="hex">text-primary</span></div>
+  <div class="sw dark" style="background:var(--warm-950)"><span class="name">warm-950</span><span class="hex">deepest</span></div>
+</div>
+</body></html>

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Soft blue — Info & focus" subtitle="Links, focus rings, secondary info. Never primary brand." -->
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:18px; background:var(--background); font-family:var(--font-sans); color:var(--text-primary); }
+  .row { display:flex; gap:10px; }
+  .sw { flex:1; min-width:0; border-radius:var(--radius-sm); padding:10px 12px; display:flex; flex-direction:column; gap:2px; border:1px solid var(--border-subtle); }
+  .name { font:var(--type-ui); font-size:11.5px; }
+  .hex  { font:var(--type-mono); font-size:10.5px; opacity:.7; }
+  .light { color: var(--warm-900); }
+  .dark  { color: oklch(0.99 0.005 235); }
+</style></head><body>
+<div class="row">
+  <div class="sw light" style="background:var(--blue-50)"><span class="name">blue-50</span><span class="hex">info bg</span></div>
+  <div class="sw light" style="background:var(--blue-100)"><span class="name">blue-100</span><span class="hex">tint</span></div>
+  <div class="sw light" style="background:var(--blue-200)"><span class="name">blue-200</span><span class="hex">tint</span></div>
+  <div class="sw light" style="background:var(--blue-300)"><span class="name">blue-300</span><span class="hex">tint</span></div>
+  <div class="sw dark"  style="background:var(--blue-400)"><span class="name">blue-400</span><span class="hex"></span></div>
+  <div class="sw dark"  style="background:var(--blue-500)"><span class="name">blue-500</span><span class="hex">info · focus ring</span></div>
+  <div class="sw dark"  style="background:var(--blue-600)"><span class="name">blue-600</span><span class="hex">link</span></div>
+  <div class="sw dark"  style="background:var(--blue-700)"><span class="name">blue-700</span><span class="hex">link-hover</span></div>
+</div>
+</body></html>

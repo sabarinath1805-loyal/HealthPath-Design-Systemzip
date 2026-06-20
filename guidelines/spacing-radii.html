@@ -1,0 +1,21 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radii" subtitle="Soft, never pill-y for content. Mic/send/avatars are the only full-round." -->
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:18px 22px; background:var(--background); color:var(--text-primary); font-family:var(--font-sans); }
+  .row { display:flex; gap:14px; align-items:flex-end; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .box { width:72px; height:72px; background:var(--surface-card); border:1px solid var(--border); }
+  .lbl { font:var(--type-caption); color:var(--text-muted); font-family:var(--font-mono); }
+  .name { font:var(--type-ui); font-size:11.5px; }
+</style></head><body>
+<div class="row">
+  <div class="item"><div class="box" style="border-radius:var(--radius-xs)"></div><div class="name">xs</div><div class="lbl">4 · chips</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="name">sm</div><div class="lbl">6 · buttons</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><div class="name">md</div><div class="lbl">10 · cards</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="name">lg</div><div class="lbl">14 · composer</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><div class="name">xl</div><div class="lbl">18 · bubbles</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-2xl)"></div><div class="name">2xl</div><div class="lbl">24 · sheets</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-full); width:48px; height:48px; background:var(--teal-600)"></div><div class="name">full</div><div class="lbl">round</div></div>
+</div>
+</body></html>
