@@ -1,0 +1,1 @@
+- [Drizzle push vs connect-pg-simple](drizzle-push-session-table.md) — `drizzle-kit push` wants to DROP the untracked `session` table; never accept. Apply column/enum changes via SQL instead.

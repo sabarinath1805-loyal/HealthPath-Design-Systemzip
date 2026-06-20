@@ -1,0 +1,7 @@
+/* HealthPath webfonts
+ * Geist + Geist Mono — the typefaces from the underlying chat product (vercel/ai-chatbot).
+ * Loaded from the Google Fonts CDN. If you need fully self-hosted binaries,
+ * drop the .woff2 files into assets/fonts/ and replace these @import lines with
+ * matching @font-face rules. (Flagged to the user — see README.)
+ */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap");

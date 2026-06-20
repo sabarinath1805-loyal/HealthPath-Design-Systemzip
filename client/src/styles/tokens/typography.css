@@ -1,0 +1,55 @@
+/* ============================================================
+   HealthPath — Typography tokens
+   Geist for everything; Geist Mono for reference codes, claim
+   numbers, and document metadata. Calm, generous, legible at
+   small sizes for low-end phones.
+   ============================================================ */
+
+:root {
+  /* Families */
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", "Cascadia Code",
+    "JetBrains Mono", monospace;
+
+  /* Weights */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* Type scale (mobile-first; rem against 16px root) */
+  --text-xs:    0.75rem;   /* 12 — timestamps, captions */
+  --text-sm:    0.8125rem; /* 13 — chat body, UI text (matches product) */
+  --text-base:  0.9375rem; /* 15 — comfortable reading */
+  --text-md:    1.0625rem; /* 17 — lead paragraph */
+  --text-lg:    1.25rem;   /* 20 — card titles */
+  --text-xl:    1.5rem;    /* 24 — section heads */
+  --text-2xl:   1.875rem;  /* 30 — screen titles */
+  --text-3xl:   2.375rem;  /* 38 — hero / greeting */
+
+  /* Line heights */
+  --leading-tight:   1.2;
+  --leading-snug:    1.4;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.7;
+  --leading-chat:    1.65;  /* message bubbles */
+
+  /* Letter spacing */
+  --tracking-tight:  -0.025em;  /* headings */
+  --tracking-normal: 0;
+  --tracking-wide:   0.02em;    /* small caps / labels */
+
+  /* Semantic roles */
+  --type-hero:   var(--weight-semibold) var(--text-3xl)/var(--leading-tight) var(--font-sans);
+  --type-title:  var(--weight-semibold) var(--text-2xl)/var(--leading-tight) var(--font-sans);
+  --type-head:   var(--weight-semibold) var(--text-xl)/var(--leading-snug) var(--font-sans);
+  --type-card:   var(--weight-semibold) var(--text-lg)/var(--leading-snug) var(--font-sans);
+  --type-lead:   var(--weight-regular) var(--text-md)/var(--leading-relaxed) var(--font-sans);
+  --type-body:   var(--weight-regular) var(--text-base)/var(--leading-normal) var(--font-sans);
+  --type-chat:   var(--weight-regular) var(--text-sm)/var(--leading-chat) var(--font-sans);
+  --type-ui:     var(--weight-medium) var(--text-sm)/var(--leading-snug) var(--font-sans);
+  --type-caption:var(--weight-regular) var(--text-xs)/var(--leading-snug) var(--font-sans);
+  --type-mono:   var(--weight-medium) var(--text-sm)/var(--leading-snug) var(--font-mono);
+}
