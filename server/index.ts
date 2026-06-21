@@ -34,8 +34,11 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  const port = 5000;
-  server.listen({ port, host: "0.0.0.0", reusePort: true }, () => {
-    log(`serving on port ${port}`);
+  const port = Number(process.env.PORT) || 5000;
+  const host = process.env.HOST || (process.platform === "darwin" ? "127.0.0.1" : "0.0.0.0");
+  const listenOpts: any = { port, host };
+  if (process.platform !== "darwin") listenOpts.reusePort = true;
+  server.listen(listenOpts, () => {
+    log(`serving on http://${host}:${port}`);
   });
 })();

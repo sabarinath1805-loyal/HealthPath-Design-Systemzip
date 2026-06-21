@@ -53,8 +53,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await apiRequest("POST", "/api/logout");
     },
     onSuccess: () => {
+      // Mark the user query as null first so ProtectedRoute redirects
+      // before any other queries re-run. Invalidate (don't clear) so any
+      // subsequent login starts from a clean cache without a render race.
       queryClient.setQueryData(["/api/user"], null);
-      queryClient.clear();
+      queryClient.invalidateQueries();
     },
   });
 

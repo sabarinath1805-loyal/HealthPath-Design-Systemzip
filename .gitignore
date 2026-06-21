@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+public/
+
+# Env / secrets — never commit
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Replit runtime state
+.replit.state
+
+# Stale install artifacts from this debug session
+node_modules.bad/
+node_modules.old/
+*.bad

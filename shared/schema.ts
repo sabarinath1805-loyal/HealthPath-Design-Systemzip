@@ -6,10 +6,28 @@ import {
   integer,
   timestamp,
   jsonb,
+  customType,
 } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+
+// pgvector support — Drizzle has no built-in type, so we register one.
+// The column type is `vector(N)` where N is the embedding dimension.
+const vector = (dim: number) =>
+  customType<{ data: number[]; driverData: string }>({
+    dataType() {
+      return `vector(${dim})`;
+    },
+    toDriver(value: number[]) {
+      return `[${value.join(",")}]`;
+    },
+    fromDriver(value: string) {
+      // pg returns a string like "[0.1,0.2,...]"; parse it.
+      const inner = value.replace(/^\[|\]$/g, "");
+      return inner.split(",").map((n) => Number(n));
+    },
+  });
 
 export const caseStatusEnum = pgEnum("case_status", [
   "open",
@@ -83,3 +101,19 @@ export type User = typeof users.$inferSelect;
 export type Case = typeof cases.$inferSelect;
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = typeof messages.$inferInsert;
+
+/* ------------------------------------------------------------------
+ *  RAG — small per-country document store for legal-rights and
+ *  insurance-coverage answers. Each row is one ~1000-char chunk
+ *  of an officially-named source, with an embedding for cosine
+ *  nearest-neighbor search.
+ * ------------------------------------------------------------------ */
+
+export const ragChunks = pgTable("rag_chunks", {
+  id: serial("id").primaryKey(),
+  source: text("source").notNull(),
+  country: text("country").notNull(),
+  section: text("section").notNull(),
+  text: text("text").notNull(),
+  embedding: vector(256)("embedding").notNull(),
+});

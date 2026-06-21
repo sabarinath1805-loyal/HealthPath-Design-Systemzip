@@ -11,6 +11,7 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0",
     "@tanstack/react-query": "^5.59.16",
     "connect-pg-simple": "^10.0.0",
     "drizzle-orm": "^0.36.4",
@@ -20,9 +21,11 @@
     "openai": "^4.73.0",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
-    "pg": "^8.13.1",
+    "pg": "^8.22.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "wouter": "^3.3.5",
     "zod": "^3.23.8"
   },

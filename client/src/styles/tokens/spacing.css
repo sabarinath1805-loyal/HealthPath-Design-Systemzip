@@ -64,8 +64,8 @@
   /* Layout */
   --sidebar-width:      17rem;   /* 272 */
   --sidebar-collapsed:  3.25rem;
-  --chat-max-width:     46rem;   /* 736 — reading measure for chat column */
+  --chat-max-width:     64rem;   /* 1024 — wider reading measure on big screens */
   --content-max-width:  64rem;
-  --composer-max-width: 46rem;
+  --composer-max-width: 64rem;
   --touch-target:       2.75rem; /* 44 — minimum tap size */
 }

@@ -4,6 +4,7 @@ import { IconButton } from "../core/IconButton";
 import { Avatar } from "../core/Avatar";
 import { BrandLogo } from "./BrandLogo";
 import { ConversationItem } from "./ConversationItem";
+import { UserMenu } from "./UserMenu";
 
 export function Sidebar({
   cases = [],
@@ -65,9 +66,7 @@ export function Sidebar({
             <span className="hp-sidebar__user-name">{user.name}</span>
             {user.meta && <span className="hp-sidebar__user-meta">{user.meta}</span>}
           </div>
-          <IconButton label="Account options">
-            <Icon name="more" size={16} />
-          </IconButton>
+          <UserMenu user={user} />
         </div>
       )}
     </aside>
